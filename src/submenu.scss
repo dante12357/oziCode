@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  .blackout {
+    background-color: #00000078;
+  }
+
+  .submenu {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px -3px 20px 0px grey;
+    @media screen and(max-width: 767px) {
+      text-align: left;
+      overflow: scroll;
+      max-height: 100%;
+    }
+
+    .iconBlock {
+      display: none;
+      text-align: right;
+      padding: 7px 30px;
+      @media screen and (max-width: 767px) {
+        display: block;
+        img {
+          width: 38px;
+        }
+      }
+    }
+
+    .hide {
+      @media screen and(max-width: 767px) {
+        display: none;
+      }
+    }
+
+    ul {
+      list-style: none;
+      display: inline-block;
+    }
+
+    .navigationContainer {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      @media screen and(max-width: 767px) {
+        width: 100%;
+        display: none;
+      }
+
+      .firstLevel {
+        display: inline-block;
+        vertical-align: top;
+        padding: 15px 0;
+        margin: 0 27px;
+        border-bottom: solid 5px white;
+        @media screen and(max-width: 767px) {
+          display: block;
+          position: relative;
+          border: none;
+          a {
+            width: 100%;
+            display: block;
+          }
+          img{
+            position: absolute;
+            right: 8px;
+            top: 10px;
+          }
+        }
+
+        &:hover {
+          border-bottom: solid 5px black;
+          @media screen and(max-width: 767px) {
+            border: none;
+          }
+
+          .secondLevelBlock {
+
+          }
+
+        }
+
+        .secondLevelBlock {
+          display: flex;
+          background-color: white;
+          position: absolute;
+          z-index: -1;
+          top: 100%;
+          left: 8px;
+          width: 100%;
+          padding: 20px 0;
+          @media screen and(max-width: 767px) {
+            display: block;
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 100%;
+            z-index: 0;
+            padding: 0;
+
+          }
+
+          .secondLevel {
+            display: inline-block;
+            vertical-align: top;
+            padding: 0 20px;
+            @media screen and(max-width: 767px) {
+              display: block;
+              position: relative;
+              padding: 15px 20px 0;
+
+            }
+            .thirdLevelBlock {
+              @media screen and(max-width: 767px) {
+                display: none;
+                width: 100%;
+              }
+              .thirdLevel {
+                padding: 0;
+                @media screen and(max-width: 767px) {
+                  display: block;
+                  width: 100%;
+                  padding: 15px 20px 0;
+                }
+              }
+            }
+            .show {
+              @media screen and(max-width: 767px) {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .show {
+      @media screen and(max-width: 767px) {
+        display: block;
+      }
+    }
+  }
+
+  .border {
+    border-bottom: solid 1px gray;
+    box-shadow: inherit;
+  }
+
+  .wrapper {
+    padding: 69px;
+    @media screen and (max-width: 805px){
+      padding: 126px 69px 69px 69px;
+    }
+    @media screen and (max-width: 767px){
+      padding: 69px;
+    }
+  }
+}
+
+.overlay {
+  z-index: -2;
+  background-color: #00000078;
+  height: 100%;
+}
+
